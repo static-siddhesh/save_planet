@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 250ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Raleway',sans-serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*Header  */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    float: right;
+} 
+nav li{
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a{
+    font-weight: 900;
+    text-decoration: none;
+    padding: .5em;
+    text-transform: uppercase;
+    color: purple;
+    font-size: .8rem;
+
+}
+
+nav a:hover,nav a:focus {
+    color: khaki;
+    background-color: black;
+
+}
+
+@media (min-width:60rem)
+{
+.logo{
+    float: left;
+}
+
+nav{
+    float: right;
+}
+}
+
+/* hero classes */
+.home-hero {
+    background: url(mom.jpg);
+    padding: 10em 0;
+    color: whitesmoke;
+    font-size: larger;
+    background-size: cover;
+    background-position: center;
+    
+    padding-top: 8vh;
+    height: 85%;
+   
+}
+
+@media(min-width: 30%)
+{
+    .home-hero{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+
+}
+
+.home-about-textbox{
+     background-color: darkslategray;
+     padding:4em;
+     
+     margin-left: 10%;
+     margin-right: 10%;
+     outline: 2px solid orange;
+     outline-offset: -2.5em;
+     color: palegoldenrod;
+     position: relative;
+
+}
+
+.home-about-textbox h1{
+    color: yellowgreen;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 0.75em;
+    background:brown;
+    padding: 0 .145em;
+
+}
+
+@media(min-width: 25 rem){
+    h1{
+        font-size:2rem;
+    }
+    .home-about-textbox h1{
+            top:.6em;
+            padding: 0 .25em;
+        }
+    
+}
+
+@media(min-width: 40rem){
+
+    h1{
+        font-size: 1 rem;
+        font-weight: 300;
+        
+    }
+
+    .home-about{
+        padding-bottom: 20em;
+        background-image: url(earth.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-left: 3em;
+        margin-right: 2em;
+        
+        
+    }
+   
+    .home-about-textbox{
+        width:55%;
+        padding: 5em;
+        outline-offset: -3.75;
+        margin-right: -3.5;
+        bottom: -25em;
+        text-align: left;
+        box-shadow: 0 0 4em gray;
+
+    }
+
+    .home-about-textbox h1{
+        top: .6em;
+        left: 5rem;
+        right:2.7rem;
+        transform: translateX(0);
+    }
+    
+}
+/*portfolio function*/
+.portfolio{
+    margin: 7em 0 0;
+}
+
+.portfolio h1{
+    text-decoration: underline;
+    font-size: xx-large;
+    font-weight: 800;
+    
+}
+.port-item{
+    margin: 0;
+    position: relative;
+    
+}
+
+.port-item img{
+    height: 20em;
+}
+.port-description {
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: honeydew;
+    background: black;
+    opacity: .5;
+    padding-bottom: 2em;
+}
+
+.port-description p{
+    margin: 1em;
+    font-size: larger;
+
+}
+
+.port-description a{
+    color: cornsilk;
+}
+@media(min-width:37rem)
+{
+    .port-item{
+        width:50%;
+        float: left;
+        overflow: hidden;
+    }
+    .port-description{
+        transform: translateY(150%);
+    }
+
+    .port-item:hover .port-description{
+        transform: translateY(0%);
+    }
+
+    .port-item:focus-within .port-description{
+        transform: translateY(0%);
+    }
+}
+
+@media(min-width: 60rem)
+{
+    .port-item img{
+        width: 100%;
+    }
+
+    .port-item{
+        width: 33.333334%;
+        height: auto;
+        float: left;
+    }
+
+    .port-description{
+        transform: translateY(150%);
+    }
+
+    .port-item:hover .port-description{
+        transform: translateY(0%);
+    }
+
+    .port-item:focus-within .port-description{
+        transform: translateY(0%);
+    }
+}
+
+.cta{
+    background-color:wheat;
+    padding: 5em 0;
+    
+}
+
+footer{
+    background: black;
+    color: blanchedalmond;
+    text-align: left;
+    padding: 5em 0;
+}
+
+/*coloum system*/
+[class^=col-]
+{
+    width: 100%;
+    margin-top:1 em;
+}
+[class^=col-]:first-child
+    {
+        margin-top: 0;
+    }
+
+
+.col-1{
+    width: 33.33334%;
+    float: left;
+}
+
+@media (min-width:40rem)
+{
+    [class^=col-]
+    {
+        float: left;
+        padding: 0 0.5em;
+        margin-top: 0;
+    }
+    [class^=col-]:first-child
+    {
+        padding-left: 0;
+    }
+    [class^=col-]:last-child
+    {
+        padding-right: 0;
+    }
+    .col-3{
+        width: 50%;
+    }
+
+    .col-1{
+        width: 16.66666665%;
+    }
+}
+
+/*typography*/
+
+h1{
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+p{
+    margin-top: 0;
+    line-height: 1.7;
+}
+
+p:last-of-type{
+    margin-bottom: 0;
+}
+
+@media(min-width:60rem)
+{
+    p{
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+}
+
+.title{
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 900;
+    margin-top: 1em;
+
+}
+
+.title spam{
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
+}
+
+.title-cta{
+    margin: 0 0 .5em;
+}
+
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+
+@media (min-width:60rem){
+    p{
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    .title{
+        font-size: 3.7rem;
+    }
+}
+
+/****Buttons******/
+
+.button{
+    display: inline-block;
+    font-size: 1.15rem;
+    font-weight: 300px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: dashed;
+    padding: .5em 1.75em;
+}
+
+@media(min-width:60rem)
+{
+    .button{
+        font-size: 1.5em;
+    }
+}
+
+.button-small{
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.button-accent{
+    color: whitesmoke;
+    border-color: wheat;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: black;
+    color: khaki;
+    opacity: 0.5;
+}
+
+.button-dark{
+    color: rgb(85, 14, 14);
+    border-color: midnightblue;
+    font-weight: 600;
+}
+
+.button-dark:hover,
+.button-dark:focus{
+    background: black;
+    color: khaki;
+}
+
+/**************test.html************/
+.head2{
+    position: relative;
+}
+
+.homee{
+    background:url(dipuu.png) ;
+    background-position: center;
+    background-size: cover;
+    padding-top: 11vh;
+    color: black;
+    height: 100%;
+    
+    
+}
+
+.containerr{
+    border: 2px solid brown;
+    border-radius: 2em;
+    background-color: burlywood;
+    box-shadow: 0 0 4em gray;
+    opacity: 0.1;
+    margin-right: 5em;
+    margin-left: 2em;
+    margin-top: 30em;
+    width: 60%;
+    padding: 1em 2em 2em;
+}
+
+.containerr:hover{
+    opacity: 0.8;
+    background-color: black;
+    color: khaki;
+    
+}
+
+/*
+.textbox a{
+    border:2px dashed brown;
+    border-radius: 2em;
+    padding: 0.5rem ;
+    box-shadow: 0 9px gray;
+    
+    
+    .textbox a:hover{
+
+    background-color:cornsilk;
+    color: rgb(134, 85, 19);
+
+
+}
+}
+*/
+.button{
+	padding: 0.5rem;
+	background-color: black;
+	color: khaki;
+	border:2px solid brown;
+	border-radius: 15px;
+	margin-top: 4px;
+	box-shadow: 0 9px #999;
+	cursor: pointer;
+
+
+}
+.button:active{
+	transition: 0.1s;
+	background-color: black;
+	color: white;
+	box-shadow: 0 5px #666;
+	transform: translateY(8px);
+}
+
+.button a{
+    color: khaki;
+}
+
+.dropdown{
+    display:block;
+    position: relative;
+}
+
+.dropbtn{
+    cursor: pointer;
+    transition: 1s ease;
+}
+.dropdown-content{
+	box-shadow: 0px 8px 16px 0px;
+	position: absolute;
+	margin-top: 4px;
+	min-width: 90%;
+	display: none;
+    z-index: 1;
+    margin-bottom: 0em;
+
+
+}
+
+.dropdown-content a{
+   color: purple;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   margin-bottom: 1em;
+   padding-right: 7px;
+   border: 2px solid black;
+}
+
+.dropdown-content a:hover{
+    background-color :black;
+    color: khaki;
+
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+#id1{
+    margin-bottom: 0em;
+}
+
+#id1:hover{
+    margin-bottom: 0em;
+}
